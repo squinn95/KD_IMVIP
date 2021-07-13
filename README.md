@@ -14,6 +14,8 @@ Momentum:
 Weight Decay: 5e-4  
 Batch size:
 
+<sup>[1](#myfootnote1)</sup>
+
 ## CIFAR10 (Baseline Student)
 
 All training parameters are identical to section [1.1](#sec:default_params) with the exception of:
