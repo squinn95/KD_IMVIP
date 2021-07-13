@@ -25,7 +25,7 @@ These datasets consist of 60,000 images each with a resolution of 32 x 32 pixels
 
 # Models
 
-We use standard ResNet-56 for the teacher model and ResNet-20 for the baseline and all student models. We initialised the weights in our teacher, baseline and all student networks according to the same strategy, with convolutional layers initialised using fan-out Kaiming initialisation. The same teacher is used to train all students.
+We use standard ResNet-56 for the teacher model and ResNet-20 for the baseline and all student models. We initialise the weights in our teacher, baseline and all student networks in the same way, using fan-out Kaiming initialisation. The same teacher is used to train all students.
 
 ## 1. CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
