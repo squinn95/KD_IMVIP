@@ -98,6 +98,8 @@ Layers Used: Final convolutional layer
 *nce_t*:  
 *nce_m*:
 
+<a name="myfootnote1">1</a>: Footnote content goes here
+
 ## CRD Training Parameters (CIFAR10)
 
 All other parameters the same as [1.8](#sec:crd_default).
