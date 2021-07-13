@@ -1,5 +1,3 @@
-# KD_IMVIP
-
 # Full Training Parameters
 
 ## CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
@@ -8,7 +6,7 @@ Other optimisation parameters taken as default from
 torch.optim.SGD\[1\]. The epoch with the highest classification accuracy
 on the validation dataset is selected as the final model weights.
 
-Training Epochs: 2̄00 Training Epochs:  
+Training Epochs: 200 Training Epochs:  
 Optimiser: SGD  
 Learning Rate: initially, decayed to 0.01 and 0.001 at 80 and 120 epochs
 respectively  
@@ -29,7 +27,7 @@ All training parameters from section [1.1](#sec:default_params) are used for KD 
 
 Training Epochs: 200 
 T:  
-\(\alpha\):
+α:
 
 ## FitNet Training Parameters
 
@@ -39,7 +37,7 @@ Training Epochs: 200 Training Epochs: , early stopping after 100 epochs of no im
 Optimiser: RMSprop  
 Learning Rate:  
 Batch size:  
-Layers Used: layer selected approx \(\frac{1}{3}\) of the way into each network.
+Layers Used: layer selected approx one third of the way into each network.
 
 ## FSP Training Parameters
 
@@ -73,8 +71,8 @@ Training Epochs: 200
 β (CIFAR100): 1.7122e-3  
   
 **Polynomial Kernel:**  
-d:  
-c:  
+*d*:  
+*c*:  
 β (CIFAR10): 7.7375e-20  
 β (CIFAR100): 9.5243e-18  
   
@@ -86,7 +84,7 @@ N Kernels:
 
 ## CRD Training Parameters (CIFAR100)
 
-The following parameters are used for CRD joint-loss training for the CIFAR-100 dataset. The parameter β scales the CRD loss to an appropriate magnitude before being added to the label loss. \(nce_k\), \(nce_t\) and \(nce_m\) are CRD specific parameters with default values taken as per original paper . When we train CRD with KD we add to our \(\beta\) scaled CRD loss and label loss the KD soft loss to form a triplet loss. We use temperature T=8 as per section [1.3](#sec:kd_params).
+The following parameters are used for CRD joint-loss training for the CIFAR-100 dataset. The parameter β scales the CRD loss to an appropriate magnitude before being added to the label loss. *nce_k*, *nce_t* and *nce_m* are CRD specific parameters with default values taken as per original paper . When we train CRD with KD we add to our β scaled CRD loss and label loss the KD soft loss to form a triplet loss. We use temperature T=8 as per section [1.3](#sec:kd_params).
 
 Training Epochs: 240 Training Epochs:  
 Optimiser: SGD  
@@ -96,9 +94,9 @@ Weight Decay: 5e-4
 Batch size:  
 Layers Used: Final convolutional layer  
 β:  
-\(nce_k\):  
-\(nce_t\):  
-\(nce_m\):
+*nce_k*:  
+*nce_t*:  
+*nce_m*:
 
 ## CRD Training Parameters (CIFAR10)
 
