@@ -20,26 +20,42 @@ All training parameters are identical to [section 1](#1-cifar100-teacher--baseli
 Training Epochs: 200
 Learning Rate: initially, decayed to 0.01 and 0.001 at 40 and 60 epochs respectively
 
+| Parameter      | Value |
+|----------------|-------------|
+|Training Epochs            | 100 |
+|Learning Rate            | 0.1 initially, decayed to 0.01 and 0.001 at 40 and 60 epochs respectively|
+
 ## 3. KD Training Parameters
 
 All training parameters from [section 1](#1-cifar100-teacher--baseline-student-and-cifar10-teacher) are used for KD student networks with CIFAR 100 or [section 2](#2-cifar10-baseline-student) for CIFAR10. The following two parameters specific to the KD loss function are also used in both cases.
 
-*T*:  
-α:
+| Parameter      | Value |
+|----------------|-------------|
+|*T*            | 8 |
+|α            | 0.8 |
 
 ## 4. FitNet Training Parameters
 
-Training Epochs: 200 Training Epochs: , early stopping after 100 epochs of no improvement on validation loss  
+Training Epochs:   
 Optimiser: RMSprop  
 Learning Rate:  
 Batch size:  
 Layers Used: layer selected approx one third of the way into each network.
 
+| Parameter      | Value |
+|----------------|-------------|
+|Training Epochs            | 500, early stopping after 100 epochs of no improvement on validation loss |
+|Optimiser            | RMSprop |
+|Learning Rate            | 0.005 |
+|Batch size            |  128|
+|Layers Used            | layer selected approx one third of the way into each network  |
+
+
 Other optimisation parameters taken as default from [torch.optim.RMSprop](https://pytorch.org/docs/stable/optim.html). The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to [section 1](#1-cifar100-teacher--baseline-student-and-cifar10-teacher) for CIFAR100 or [section 2](#2-cifar10-baseline-student) for CIFAR10. If we are combining FitNets with KD we train step 2 according to [section 3](#3-kd-training-parameters).
 
 ## 5. FSP Training Parameters
 
-Training Epochs: 200 Training Epochs:  
+Training Epochs:  
 Optimiser: SGD  
 Learning Rate: initially, decayed to 0.001 and 0.0001 at 82 and 123 epochs respectively  
 Momentum:  
@@ -51,7 +67,7 @@ Other optimisation parameters taken as default from [torch.optim.SGD](https://py
 
 ## 6. PKT Training Parameters
 
-Training Epochs: 200 Training Epochs: , early stopping after 100 epochs of no improvement on validation loss  
+Training Epochs: , early stopping after 100 epochs of no improvement on validation loss  
 Optimiser: Adam  
 Learning Rate: 1e-4  
 Batch size:  
@@ -105,5 +121,5 @@ The parameter β scales the CRD loss to an appropriate magnitude before being ad
 
 All other parameters the same as [section 8](#8-crd-training-parameters-cifar100).
 
-Training Epochs: 240 Training Epochs:  
+Training Epochs:  
 Learning Rate: initially, multiplied by 0.1 at 112, 135 and 157 epochs.
