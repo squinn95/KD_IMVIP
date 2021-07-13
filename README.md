@@ -2,6 +2,8 @@
 
 ## CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
+(##-CIFAR100-(Teacher-&-Baseline-Student)-and-CIFAR10-(Teacher))
+
 Training Epochs: 200 Training Epochs:  
 Optimiser: SGD  
 Learning Rate: initially, decayed to 0.01 and 0.001 at 80 and 120 epochs
@@ -25,6 +27,8 @@ All training parameters from section [1.1](#sec:default_params) are used for KD 
 
 T:  
 α:
+
+[section 1](##-CIFAR100-(Teacher-&-Baseline-Student)-and-CIFAR10-(Teacher))
 
 ## FitNet Training Parameters
 
