@@ -2,9 +2,7 @@
 
 ## CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
-Other optimisation parameters taken as default from
-torch.optim.SGD\[1\]. The epoch with the highest classification accuracy
-on the validation dataset is selected as the final model weights.
+Other optimisation parameters taken as default from [torch.optim.SGD](https://pytorch.org/docs/stable/optim.html). The epoch with the highest classification accuracy on the validation dataset is selected as the final model weights.
 
 Training Epochs: 200 Training Epochs:  
 Optimiser: SGD  
@@ -100,7 +98,7 @@ Layers Used: Final convolutional layer
 *nce_t*:  
 *nce_m*:
 
-<a name="myfootnote1">1</a>: Footnote content goes here
+
 
 ## CRD Training Parameters (CIFAR10)
 
@@ -108,5 +106,3 @@ All other parameters the same as [1.8](#sec:crd_default).
 
 Training Epochs: 240 Training Epochs:  
 Learning Rate: initially, multiplied by 0.1 at 112, 135 and 157 epochs.
-
-1.  <span id="optim_docs" label="optim_docs">\[optim\_docs\]</span>https://pytorch.org/docs/stable/optim.html
