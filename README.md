@@ -119,25 +119,17 @@ The following parameters are used for CRD joint-loss training for the CIFAR-100 
 |Batch size            | 64 |
 |Layers Used            | Final convolutional layer |
 |β            | 0.8|
-|*nce_k*           | 4096 |
-|*nce_t*            | 0.07 |
-|*nce_m*            | 0.5 |
+|*nce<sub>k<sub>*           | 4096 |
+|*nce<sub>t<sub>*            | 0.07 |
 |*nce<sub>m<sub>*            | 0.5 |
 
-The parameter β scales the CRD loss to an appropriate magnitude before being added to the label loss. *nce_k*, *nce_t* and *nce_m* are CRD specific parameters with default values taken as per original paper. When we train CRD with KD we add to our β scaled CRD loss and label loss the KD soft loss to form a triplet loss. We use temperature *T*=8 as per [section 3](#3-kd-training-parameters).
+The parameter β scales the CRD loss to an appropriate magnitude before being added to the label loss. *nce<sub>k<sub>*, *nce<sub>t<sub>* and *nce<sub>m<sub>*  are CRD specific parameters with default values taken as per original paper. When we train CRD with KD we add to our β scaled CRD loss and label loss the KD soft loss to form a triplet loss. We use temperature *T*=8 as per [section 3](#3-kd-training-parameters).
 
 ## 9. CRD Training Parameters (CIFAR10)
 
 | Parameter      | Value |
 |----------------|-------------|
-|Training Epochs            | 200 |
-|Optimiser            | SGD |
-|Learning Rate            | 0.1 initially, decayed to 0.01 and 0.001 at 80 and 120 epochs respectively|
-|Momentum            | 0.9 |
-|Weight Decay            | 5e-4 |
-|Batch size            | 64 |
-
-Training Epochs:  
-Learning Rate: initially, multiplied by 0.1 at 112, 135 and 157 epochs.
+|Training Epochs            |180|
+|Learning Rate            |0.01 initially, multiplied by 0.1 at 112, 135 and 157 epochs|
 
 All other parameters the same as [section 8](#8-crd-training-parameters-cifar100).
