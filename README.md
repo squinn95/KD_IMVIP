@@ -1,28 +1,27 @@
 # Dataset Parameters
 
+### Description of CIFAR datasets
+These datasets consist of 60,000 images each with a resolution of 32 x 32 pixels. The data is organised into 50,000 training samples and 10,000 test samples. CIFAR-10 is grouped into 10 classes with each class having exactly 6000 images. CIFAR-100 is grouped into 100 classes with each class having exactly 600 images. 
 
-We load the CIFAR datasets from the [torchvision](https://pytorch.org/vision/stable/datasets.html#cifar) library which returns the data using the standard train-test split. We then perform the following transformations on the data prior to training models.
-We randomly split the test set into 5,000 validation samples and 5,000 test samples. This split is then preserved across all models trained. The indices of the 5000 samples selected from the torchvision test set to be used as the final test set for each dataset are included in this repo.
+### Data loading Regime
+
+- We load the CIFAR datasets from the [torchvision](https://pytorch.org/vision/stable/datasets.html#cifar) library which returns the data using the standard train-test split. We then perform the following transformations on the data prior to training models.
+
+- We randomly split the test set into 5,000 validation samples and 5,000 test samples. This split is then preserved across all models trained. The indices of the 5000 samples selected from the torchvision test set to be used as the final test set for each dataset are included in this repo.
 
 ` CIFAR100_test_indexes.txt `
 ` CIFAR10_test_indexes.txt `
 
-We apply mean and standard deviation normalisation to the data with the following parameters: 
+-  We apply mean and standard deviation normalisation to the data with the following parameters: 
 
-| Dataset     | Mean Normalisation | Standard deviation Normalization |
+| Dataset     | Mean | Standard Deviation |
 |----------------|-------------|-------------|
 |CIFAR-10        | [0.4914, 0.4822, 0.4465] | [0.2023, 0.1994, 0.2010] |
 |CIFAR-100       | [0.5071, 0.4865, 0.4409] | [0.2009, 0.1984, 0.2023] |
 
+-  The images are further transformed by adding 4 pixels white space padding to the edges followed by a random 32 x 32 crop of the enlarged image.
 
-The images are further transformed by adding 4 pixels white space padding to the edges followed by a random 32 x 32 crop of the enlarged image.
-
-Finally we apply random horizontal flipping to our training data with probability 0.5.
-
-
-### Description of CIFAR datasets
-These datasets consist of 60,000 images each with a resolution of 32 x 32 pixels. The data is organised into 50,000 training samples and 10,000 test samples. CIFAR-10 is grouped into 10 classes with each class having exactly 6000 images. CIFAR-100 is grouped into 100 classes with each class having exactly 600 images. 
-
+-  Finally we apply random horizontal flipping to our training data with probability 0.5.
 
 # Model Parameters
 
