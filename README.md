@@ -7,7 +7,7 @@ These datasets consist of 60,000 images each with a resolution of 32 x 32 pixels
 
 - We load the CIFAR datasets from the [torchvision](https://pytorch.org/vision/stable/datasets.html#cifar) library which returns the data using the standard train-test split. We then perform the following transformations on the data prior to training models.
 
-- We randomly split the test set into 5,000 validation samples and 5,000 test samples. This split is then preserved across all models trained. The indices of the 5000 samples selected from the torchvision test set to be used as the final test set for each dataset are included in this repo.
+- We randomly split the test set into 5,000 validation samples and 5,000 test samples. This split is then preserved across all models trained. The indices of the 5000 samples selected from the torchvision test sets to be used as the final test set for each dataset are included in this repo.
 
 ` CIFAR100_test_indexes.txt `
 ` CIFAR10_test_indexes.txt `
