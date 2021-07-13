@@ -26,7 +26,7 @@ All training parameters from section [1.1](#sec:default_params) are used for KD 
 T:  
 α:
 
-[Section 1](##-CIFAR100-(Teacher-&-Baseline-Student)-and-CIFAR10-(Teacher))
+[Section 1](#cifar100-teacher--baseline-student-and-cifar10-teacher)
 
 ## FitNet Training Parameters
 
