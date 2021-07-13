@@ -19,7 +19,7 @@ These datasets consist of 60,000 images each with a resolution of 32 x 32 pixels
 |CIFAR-10        | [0.4914, 0.4822, 0.4465] | [0.2023, 0.1994, 0.2010] |
 |CIFAR-100       | [0.5071, 0.4865, 0.4409] | [0.2009, 0.1984, 0.2023] |
 
--  The images are further transformed by adding 4 pixels white space padding to the edges followed by a random 32 x 32 crop of the enlarged image.
+-  We add 4 pixels white space padding to the edges of images followed by a random 32 x 32 crop of the enlarged image.
 
 -  Finally we apply random horizontal flipping to our training data with probability 0.5.
 
