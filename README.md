@@ -96,7 +96,7 @@ N Kernels:
 
 | Parameter      | Value |
 |----------------|-------------|
-|Training Epochs            | 200 |
+|**All Kernels:**             ||
 |Optimiser            | SGD |
 |Learning Rate            | 0.1 initially, decayed to 0.01 and 0.001 at 80 and 120 epochs respectively|
 |Momentum            | 0.9 |
