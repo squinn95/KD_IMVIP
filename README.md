@@ -10,6 +10,7 @@ Momentum:
 Weight Decay: 5e-4  
 Batch size:
 
+| Parameter      | Value |
 |----------------|-------------|
 |Training Epochs            | 200 |
 |Training Epochs            | 200 |
