@@ -144,7 +144,7 @@ Momentum:
 Weight Decay: 5e-4  
 Batch size:  
 Layers Used: Final convolutional layer  
-\(\beta\):  
+β:  
 \(nce_k\):  
 \(nce_t\):  
 \(nce_m\):
