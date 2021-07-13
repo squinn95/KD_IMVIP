@@ -23,7 +23,7 @@ Learning Rate: initially, decayed to 0.01 and 0.001 at 40 and 60 epochs respecti
 
 All training parameters from [section 1](#1-cifar100-teacher--baseline-student-and-cifar10-teacher) are used for KD student networks with CIFAR 100 or [section 2](#2-cifar10-baseline-student) for CIFAR10. The following two parameters specific to the KD loss function are also used in both cases.
 
-T:  
+*T*:  
 α:
 
 ## 4. FitNet Training Parameters
@@ -98,8 +98,7 @@ Layers Used: Final convolutional layer
 *nce_t*:  
 *nce_m*:
 
-The parameter β scales the CRD loss to an appropriate magnitude before being added to the label loss. *nce_k*, *nce_t* and *nce_m* are CRD specific parameters with default values taken as per original paper. When we train CRD with KD we add to our β scaled CRD loss and label loss the KD soft loss to form a triplet loss. We use temperature T=8 as per [section 3](#3-kd-training-parameters).
-
+The parameter β scales the CRD loss to an appropriate magnitude before being added to the label loss. *nce_k*, *nce_t* and *nce_m* are CRD specific parameters with default values taken as per original paper. When we train CRD with KD we add to our β scaled CRD loss and label loss the KD soft loss to form a triplet loss. We use temperature *T*=8 as per [section 3](#3-kd-training-parameters).
 
 ## 9. CRD Training Parameters (CIFAR10)
 
