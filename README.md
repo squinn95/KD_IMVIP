@@ -74,34 +74,23 @@ Other optimisation parameters taken as default from [torch.optim.Adam](https://p
 
 ## 7. MMD Training Parameters
 
-**All Kernels:** 
-Layers Used: Final convolutional layer
-
-**Linear Kernel:**  
-
-β (CIFAR10): 6.0853e-3  
-β (CIFAR100): 1.7122e-3  
-  
-**Polynomial Kernel:**  
-*d*:  
-*c*:  
-β (CIFAR10): 7.7375e-20  
-β (CIFAR100): 9.5243e-18  
-  
-**Gaussian Kernel:**  
-Kernel Mul:  
-N Kernels:  
-β (CIFAR10):  
-β (CIFAR100):
-
 | Parameter      | Value |
 |----------------|-------------|
-|**All Kernels:**             ||
-|Optimiser            | SGD |
-|Learning Rate            | 0.1 initially, decayed to 0.01 and 0.001 at 80 and 120 epochs respectively|
-|Momentum            | 0.9 |
-|Weight Decay            | 5e-4 |
-|Batch size            | 64 |
+|**All Kernels**             ||
+|Layers Used           | Final convolutional layer |
+|**Linear Kernel**              ||
+|β (CIFAR10)            | 6.0853e-3 |
+|β (CIFAR100)           | 1.7122e-3 |
+|**Polynomial Kernel**              ||
+|*d*            | 2 |
+|*c*            | 0 |
+|β (CIFAR10)            | 7.7375e-20 |
+|β (CIFAR100)            | 9.5243e-18|
+|**Gaussian Kernel**              ||
+|Kernel Mul           | 2 |
+|N Kernels            | 5 |
+|β (CIFAR10)            | 17.03 |
+|β (CIFAR100)            | 26.5041|
 
 The parameter β scales the MMD loss to an appropriate magnitude relevant to the cross-entropy label loss. This scaling was necessary to facilitate functional gradient descent. We calculated β prior to training and kept it constant throughout. The MMD loss is multiplied by β before being added to the label loss. When we train MMD with KD we switch out our cross-entropy label loss for the KD joint loss to form a triplet loss. We use the same KD parameters as in [section 3](#3-kd-training-parameters). All MMD parameters are the same when used with KD with the exception of one; we set β = 5.3008 for the Gaussian Kernel with KD on CIFAR100. We take all other base training parameters for the MMD models from [section 1](#1-cifar100-teacher--baseline-student-and-cifar10-teacher) for CIFAR100 or [section 2](#2-cifar10-baseline-student) for CIFAR10. 
 
