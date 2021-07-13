@@ -1,8 +1,8 @@
-# Dataset Loading Parameters
+# Dataset Parameters
 
 These datasets consist of 60,000 images each with a resolution of $32\times 32$ pixels. The data is organised into 50,000 training samples and 10,000 test samples. For our experiments we randomly split the test set into 5,000 validation samples and 5,000 test samples. The same split is preserved across all models trained for each dataset in order to ensure consistency. CIFAR-10 is grouped into 10 classes with each class having exactly 6000 images. CIFAR-100 is grouped into 100 classes with each class having exactly 600 images. We apply mean and standard deviation normalisation to the data with the following parameters: CIFAR-10: \textit{mean}=[0.4914, 0.4822, 0.4465], \textit{std}=[0.2023, 0.1994, 0.2010], CIFAR-100: \textit{mean}=[0.5071, 0.4865, 0.4409], \textit{std}=[0.2009, 0.1984, 0.2023]. The training datasets are further transformed by adding 4 pixels white space padding to all sides of images followed by a random $32\times 32$ crop of the enlarged image. We also apply random horizontal flipping to our training data with a probability of 0.5.
 
-# Model Training Parameters
+# Model Parameters
 
 ## 1. CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
