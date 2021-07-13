@@ -1,6 +1,6 @@
 # Full Training Parameters
 
-## CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
+## 1. CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
 Training Epochs: 200 Training Epochs:  
 Optimiser: SGD  
@@ -12,23 +12,23 @@ Batch size:
 
 Other optimisation parameters taken as default from [torch.optim.SGD](https://pytorch.org/docs/stable/optim.html). The epoch with the highest classification accuracy on the validation dataset is selected as the final model weights.
 
-## CIFAR10 (Baseline Student)
+## 2. CIFAR10 (Baseline Student)
 
 All training parameters are identical to section [1.1](#sec:default_params) with the exception of:
 
 Training Epochs: 200 
 Learning Rate: initially, decayed to 0.01 and 0.001 at 40 and 60 epochs respectively
 
-## KD Training Parameters
+## 3. KD Training Parameters
 
-All training parameters from section [1.1](#sec:default_params) are used for KD student networks with CIFAR 100 or [1.2](#sec:c10student) for CIFAR10. The following two parameters specific to the KD loss function are also used in both cases.
+All training parameters from [section 1](#cifar100-teacher--baseline-student-and-cifar10-teacher) are used for KD student networks with CIFAR 100 or [section 2]() for CIFAR10. The following two parameters specific to the KD loss function are also used in both cases.
 
 T:  
 α:
 
-[Section 1](#cifar100-teacher--baseline-student-and-cifar10-teacher)
 
-## FitNet Training Parameters
+
+## 4. FitNet Training Parameters
 
 Training Epochs: 200 Training Epochs: , early stopping after 100 epochs of no improvement on validation loss  
 Optimiser: RMSprop  
@@ -38,7 +38,7 @@ Layers Used: layer selected approx one third of the way into each network.
 
 Other optimisation parameters taken as default from [torch.optim.RMSprop](https://pytorch.org/docs/stable/optim.html). The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining FitNets with KD we train step 2 according to section [1.3](#sec:kd_params).
 
-## FSP Training Parameters
+## 5. FSP Training Parameters
 
 Training Epochs: 200 Training Epochs:  
 Optimiser: SGD  
@@ -50,7 +50,7 @@ Layers Used: Flows taken over the first third, middle third and final third of e
 
 Other optimisation parameters taken as default from [torch.optim.SGD](https://pytorch.org/docs/stable/optim.html). The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining FSP with KD we train step 2 according to section [1.3](#sec:kd_params).
 
-## PKT Training Parameters
+## 6. PKT Training Parameters
 
 Training Epochs: 200 Training Epochs: , early stopping after 100 epochs of no improvement on validation loss  
 Optimiser: Adam  
@@ -60,7 +60,7 @@ Layers Used: Final convolutional layer
 
 Other optimisation parameters taken as default from [torch.optim.Adam](https://pytorch.org/docs/stable/optim.html). The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining PKT with KD we train step 2 according to section [1.3](#sec:kd_params).
 
-## MMD Training Parameters
+## 7. MMD Training Parameters
 
 **All Kernels:** 
 Layers Used: Final convolutional layer
@@ -84,7 +84,7 @@ N Kernels:
 
 The parameter β scales the MMD loss to an appropriate magnitude relevant to the cross-entropy label loss. This scaling was necessary to facilitate functional gradient descent. We calculated β prior to training and kept it constant throughout. The MMD loss is multiplied by β before being added to the label loss. When we train MMD with KD we switch out our cross-entropy label loss for the KD joint loss to form a triplet loss. We use the same KD parameters as in section [1.3](#sec:kd_params). All MMD parameters are the same when used with KD with the exception of one; we set β = 5.3008 for the Gaussian Kernel with KD on CIFAR100. We take all other base training parameters for the MMD models from [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. 
 
-## CRD Training Parameters (CIFAR100)
+## 8. CRD Training Parameters (CIFAR100)
 
 The following parameters are used for CRD joint-loss training for the CIFAR-100 dataset. 
 
@@ -103,7 +103,7 @@ Layers Used: Final convolutional layer
 The parameter β scales the CRD loss to an appropriate magnitude before being added to the label loss. *nce_k*, *nce_t* and *nce_m* are CRD specific parameters with default values taken as per original paper. When we train CRD with KD we add to our β scaled CRD loss and label loss the KD soft loss to form a triplet loss. We use temperature T=8 as per section [1.3](#sec:kd_params).
 
 
-## CRD Training Parameters (CIFAR10)
+## 9. CRD Training Parameters (CIFAR10)
 
 All other parameters the same as [1.8](#sec:crd_default).
 
