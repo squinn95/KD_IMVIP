@@ -16,7 +16,7 @@ Other optimisation parameters taken as default from [torch.optim.SGD](https://py
 
 All training parameters are identical to section [1](#1-cifar100-teacher--baseline-student-and-cifar10-teacher) with the exception of:
 
-Training Epochs: 200 
+Training Epochs: 200
 Learning Rate: initially, decayed to 0.01 and 0.001 at 40 and 60 epochs respectively
 
 ## 3. KD Training Parameters
