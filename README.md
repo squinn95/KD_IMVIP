@@ -2,13 +2,17 @@
 
 ## 1. CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
-Training Epochs: 200 Training Epochs:  
+Training Epochs: 200
 Optimiser: SGD  
 Learning Rate: initially, decayed to 0.01 and 0.001 at 80 and 120 epochs
 respectively  
 Momentum:  
 Weight Decay: 5e-4  
 Batch size:
+
+|----------------|-------------|
+|Training Epochs            | 200 |
+|Training Epochs            | 200 |
 
 Other optimisation parameters taken as default from [torch.optim.SGD](https://pytorch.org/docs/stable/optim.html). The epoch with the highest classification accuracy on the validation dataset is selected as the final model weights.
 
