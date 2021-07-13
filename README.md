@@ -83,7 +83,7 @@ Other optimisation parameters taken as default from [torch.optim.Adam](https://p
 |*c*            | 0 |
 |β (CIFAR10)            | 7.7375e-20 |
 |β (CIFAR100)            | 9.5243e-18|
-|**Gaussian Kernel**              |
+|**Gaussian Kernel**              ||
 |Kernel Mul           | 2 |
 |N Kernels            | 5 |
 |β (CIFAR10)            | 17.03 |
