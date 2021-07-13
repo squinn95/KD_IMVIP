@@ -12,8 +12,6 @@ Momentum:
 Weight Decay: 5e-4  
 Batch size:
 
-<sup>[1](#myfootnote1)</sup>
-
 ## CIFAR10 (Baseline Student)
 
 All training parameters are identical to section [1.1](#sec:default_params) with the exception of:
@@ -31,7 +29,7 @@ T:
 
 ## FitNet Training Parameters
 
-The following parameters are used for the first step of FitNet training. Other optimisation parameters taken as default from torch.optim.RMSprop. The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining FitNets with KD we train step 2 according to section [1.3](#sec:kd_params).
+The following parameters are used for the first step of FitNet training. Other optimisation parameters taken as default from [torch.optim.RMSprop](https://pytorch.org/docs/stable/optim.html). The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining FitNets with KD we train step 2 according to section [1.3](#sec:kd_params).
 
 Training Epochs: 200 Training Epochs: , early stopping after 100 epochs of no improvement on validation loss  
 Optimiser: RMSprop  
@@ -41,7 +39,7 @@ Layers Used: layer selected approx one third of the way into each network.
 
 ## FSP Training Parameters
 
-The following parameters are used for the first step of FSP training. Other optimisation parameters taken as default from torch.optim.SGD. The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining FSP with KD we train step 2 according to section [1.3](#sec:kd_params).
+The following parameters are used for the first step of FSP training. Other optimisation parameters taken as default from [torch.optim.SGD](https://pytorch.org/docs/stable/optim.html). The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining FSP with KD we train step 2 according to section [1.3](#sec:kd_params).
 
 Training Epochs: 200 Training Epochs:  
 Optimiser: SGD  
@@ -53,7 +51,7 @@ Layers Used: Flows taken over the first third, middle third and final third of e
 
 ## PKT Training Parameters
 
-The following parameters are used for the first step of PKT training. Other optimisation parameters taken as default from torch.optim.Adam. The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining PKT with KD we train step 2 according to section [1.3](#sec:kd_params).
+The following parameters are used for the first step of PKT training. Other optimisation parameters taken as default from [torch.optim.Adam](https://pytorch.org/docs/stable/optim.html). The epoch with the lowest average loss on the validation dataset is selected as the final step 1 weights. We then take these step 1 weights as initialisation and train step 2 according to section [1.1](#sec:default_params) for CIFAR100 or [1.2](#sec:c10student) for CIFAR10. If we are combining PKT with KD we train step 2 according to section [1.3](#sec:kd_params).
 
 Training Epochs: 200 Training Epochs: , early stopping after 100 epochs of no improvement on validation loss  
 Optimiser: Adam  
