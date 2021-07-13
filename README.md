@@ -1,4 +1,4 @@
-# Dataset Parameters
+# Data
 
 ### Description of CIFAR datasets
 These datasets consist of 60,000 images each with a resolution of 32 x 32 pixels. The data is organised into 50,000 training samples and 10,000 test samples. CIFAR-10 is grouped into 10 classes with each class having exactly 6000 images. CIFAR-100 is grouped into 100 classes with each class having exactly 600 images. 
@@ -23,7 +23,7 @@ These datasets consist of 60,000 images each with a resolution of 32 x 32 pixels
 
 -  Finally we apply random horizontal flipping to our training data with probability 0.5.
 
-# Model Parameters
+# Models
 
 ## 1. CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
