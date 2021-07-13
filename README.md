@@ -1,4 +1,4 @@
-# Full Training Parameters
+# Model Training Parameters
 
 ## 1. CIFAR100 (Teacher & Baseline Student) and CIFAR10 (Teacher)
 
